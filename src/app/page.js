@@ -1,24 +1,28 @@
+'use client'
+import { useState } from 'react'
 import styles from './page.module.css'
 
 
 export default function Home() {
+  const [name, setName] = useState("Anil")
+
+  const apple = () => {
+
+    setName("Sidhu")
+  }
+
+  const InnerComp = () => {
+    return (
+      <h1>Inner Component</h1>
+    )
+  }
   return (
     <main className={styles.main}>
-      <User name="Anil" />
-      <User  name="Peter" />
-      <User  name="Sam" />
-      <User  name="Bhasker" />
-      <h1>Home Page</h1>
+      <h1>Events , function and state {name} </h1>
+      <button onClick={() => apple()}>Click Me</button>
+      {/* <InnerComp /> */}
+      {InnerComp()}
     </main>
-  )
-}
-
-
-const User=(props)=>{
-  return(
-    <div>
-      <h2>User name is {props.name}</h2>
-    </div>
   )
 }
 
