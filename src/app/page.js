@@ -11,7 +11,7 @@ export default function Home() {
   }
   return (
     <main>
-     <h1>Nested Routing</h1> 
+     <h1>Dynamic Routing</h1> 
      <Link href="/login" >Go to Login Page</Link>
      <br />
      <br />
