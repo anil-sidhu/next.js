@@ -1,20 +1,14 @@
 "use client"
-import Link from 'next/link'
-import styles from './page.module.css'
-import { useRouter } from 'next/navigation'
+
+import Link from "next/link"
 
 
 export default function Home() {
-  const router = useRouter();
-  const navigate = (name) => {
-    router.push(name)
-  }
+
   return (
     <main>
-      <h1>Dynamic Routing</h1>
-      <Link href="/studentlist" >Go to Login Page</Link>
-    
-
+      <h1>Fetch Data with API in Client Component </h1>
+      <Link href="/productlist">Go to Product List</Link>
     </main>
   )
 }
