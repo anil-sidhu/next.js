@@ -3,11 +3,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <h1>css</h1>
-     <Link href="/productlist">Go to Product Page</Link>
-     <br />
-     <Link href="/user">Go to Product Page</Link>
-
+      <h1>Style and CSS with Next js</h1>
+      <h2>Heading 2 in main page</h2>
+    
     </main>
   )
 }
