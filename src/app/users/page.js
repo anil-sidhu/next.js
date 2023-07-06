@@ -1,26 +1,19 @@
-
-
-import Link from "next/link"
-import getAllUsers from "../../../lib/getAllUsers"
-
-
-export default async function UsersPage() {
-    const usersData = getAllUsers()
-
-    const users = await usersData
-
-    const content = (
+import Link from "next/link";
+import getUsers from "../../../services/getUsers"
+export default async function Page(){
+    const getUserList = getUsers();
+    const users = await getUserList;
+    console.log(users);
+    return(
         <div>
-            <br />
-            {users.map(user => {
-                return (
-                        <p key={user.id}>
-                            <Link href={`/users/${user.id}`}>{user.name}</Link>
-                        </p>
-                )
-            })}
+            <h1>User List</h1>
+            {
+                users.map((user)=>(
+                    <h2 key={user.id} >
+                        <Link href={`/users/${user.id}`} >{user.name}</Link>
+                    </h2>
+                ))
+            }
         </div>
     )
-
-    return content
 }
