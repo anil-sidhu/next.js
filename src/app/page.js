@@ -2,7 +2,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Redirection in Next js </h1>
+      <h1>Environment Variables in Next js </h1>
     </main>
   )
 }
